@@ -1,0 +1,65 @@
+.HomeContainer{
+
+    .Heros{
+        background-image:url('/bgVid.gif');
+        // background-color: linear-gradient(red, yellow);
+        
+        background-size:100%;
+        background-repeat: repeat-y;
+        background-attachment: fixed;
+        height:60vh;
+        width:100%;
+
+        // background: url("image.gif") center;
+        // background-size: cover;
+      
+        background:url('/bgVid.gif') no-repeat left top  center fixed;
+        // background-size: cover;
+
+
+        .Hero{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 4rem;
+            margin: 2rem;
+            .boldTxt{
+                color: aqua;
+                font-size: 3rem;
+                font-weight: 700;
+            }
+            .Txt{
+                font-size: 1.2rem;
+                color: aliceblue;
+            }
+
+
+            .herosBtn{
+                display: flex;
+                flex-direction: row;
+                gap: 3rem;
+                div{
+                    border: 2px solid aliceblue;
+                    border-radius: .5rem;
+                    padding: .5rem 1rem;
+
+                }
+            }
+        }
+
+
+
+    }
+
+    .body{
+        .bodyNav{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            div{
+                border: 2px solid white;
+                background: linear-gradient(180deg, rgba(59, 208, 241, 0.4) 0%, rgba(59, 208, 241, 0.04) 100%, rgba(59, 208, 241, 0.04) 100%);
+            }
+        }
+    }
+}
