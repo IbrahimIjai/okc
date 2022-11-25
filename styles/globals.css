@@ -3,7 +3,212 @@
 @tailwind utilities;
 
 
-html,
+
+body {
+  @apply bg-green-50 dark:bg-black dark:text-white font-roboto; 
+}
+
+
+/* navbar.js */
+.NavContainer {
+  @apply  flex flex-row justify-between items-center px-4 py-4 dark:text-[#fff] absolute top-0 right-0 left-0
+  ;
+}
+
+
+.Logo {
+  @apply  text-Black text-[15px] md:text-[22px] font-bold dark:text-[#fff] 
+  ;
+}
+
+
+.NavLinks {
+  @apply  flex flex-row items-center justify-around px-4 gap-4 text-Black text-[12px] md:text-[22px] font-medium dark:text-[#fff] 
+
+  ;
+}
+.Btns{
+  @apply flex;
+
+}
+
+
+
+
+
+
+
+
+
+
+.card {
+  @apply dark:text-DarkTextColor m-auto border-[1.3px] border-cardBoderGreen  rounded-md flex flex-col items-center justify-center text-center px-6 py-2 my-1 w-[85%];
+}
+.cardContainer {
+  @apply  md:grid md:grid-cols-2 lg:grid-cols-3 lg:m-auto
+  ;
+}
+
+.getStarted{
+  @apply bg-green-100 dark:bg-BgDarkGreen w-screen
+   flex flex-col items-center py-2 justify-between
+   font-roboto gap-4 dark:text-DarkTextColor
+   ;
+}
+.getStartDivContainer {
+  @apply  flex flex-col lg:flex-row items-center justify-center gap-4 mb-8
+  ;
+}
+
+.getStartDiv {
+  @apply  flex flex-col items-center justify-center gap-2 px-11 text-[1.5rem] 
+  font-semibold text-LightText 
+  ;
+}
+
+
+/* frontPage rewardtable.js */
+
+.rewardsTable{
+  @apply bg-[#011202] w-[80%] py-6 px-4 text-DarkTextColor flex flex-col items-center
+          justify-center rounded
+  ;
+}
+
+.inputDiv {
+  @apply  flex flex-col items-center justify-center gap-2 px-11 text-[1.5rem] 
+          font-semibold text-LightText 
+  ;
+}
+
+.input {
+  @apply w-[100%] text-sm text-gray-900 rounded-sm bg-green-100
+       dark:bg-gray-700  dark:placeholder-gray-400 dark:text-white 
+       px-3
+  ;
+}
+.inputAfter{
+  @apply text-black text-[.7rem] absolute font-semibold right-[.4rem] 
+
+  /* LightGreen right-2.5 bottom-2.5 font-medium rounded-lg text-sm px-2 py-2 */
+  ;
+}
+.rewards {
+  @apply  flex flex-row items-center justify-center text-DarkTextColor 
+      text-[.6rem] font-medium  rounded
+  ;
+}
+.rewardsDiv { 
+  @apply  flex flex-col justify-between px-3 py-5 text-center gap-3
+  ;
+}
+
+
+/* frontpage faq.js */
+
+
+
+.topicHead { 
+  @apply text-[1.2rem] font-bold dark:text-[#AEE2B2] pt-6
+  ;
+}
+
+.questionsContainer{
+  @apply px-3 w-[100%]
+  ;
+}
+
+.question { 
+  @apply flex flex-row justify-between border border-BgDarkGreen rounded px-3 py-2 my-4 w-[100%]
+  ;
+}
+
+
+/* constant modals connect.js */
+
+.conDicv{
+  @apply relative flex ;
+}
+.connectModalBigDiv { 
+  @apply flex flex-col bg-slate-400 justify-center items-center w-screen h-screen absolute  left-0 right-0  bottom-0 z-[-1]
+  ;
+}
+.closeModal{
+  @apply  hover:scale-50 mt-[15vh] ml-[70vw];
+}
+.connectCard{
+  @apply bg-white w-[45vw] h-[50vh] flex flex-col items-center justify-center py-12;
+}
+
+.wallets{
+  @apply flex flex-col items-center justify-between gap-6 w-[85%];
+}
+.walletLink{
+  @apply  border rounded text-white bg-[#0C7744] w-[100%] flex items-center justify-center text-[1rem]  py-1 px-4;
+}
+.cP{
+  @apply text-[#0C7744] text-lg font-semibold mt-[-4] mb-8;
+}
+
+.closer{
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* text-cardBoderGreen flex flex-col justify-center items-center px-2 py-2 */
+ 
+/* html,
 body {
   padding: 0;
   margin: 0;
@@ -28,4 +233,46 @@ a {
     color: white;
     background: black;
   }
+} */
+
+
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base{
+  body {
+      @apply bg-green-100 dark:bg-BgDarkGreen ;
+  }
+
+} */
+
+
+/* html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+} */
+
