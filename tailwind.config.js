@@ -18,6 +18,7 @@ module.exports = {
         'DarkTextColor': '#6BAF71',
         'LightText': '#012F05',
         'InputBackgroundLight':'#D8F2DB',
+        'ModalBackgroundBlur': 'rgba(185, 161, 161, 0.45)',
       },
       fontFamily: {
         'roboto': ['Roboto', 'sans-serif'],

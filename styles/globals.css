@@ -5,7 +5,7 @@
 
 
 body {
-  @apply bg-green-50 dark:bg-black dark:text-white font-roboto; 
+  @apply bg-green-100 dark:bg-black dark:text-white font-roboto; 
 }
 
 
@@ -31,6 +31,166 @@ body {
   @apply flex;
 
 }
+
+
+
+/* hero pages classes */
+
+.HerosPages{
+  @apply font-roboto  w-screen h-[90vh] mt-[-14vh]
+  bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))]
+   from-green-400 dark:from-BgLightGreen to-green-100
+    via-green-200 dark:via-BgDarkGreen  dark:to-BgDarkGreen;
+}
+
+.HeroContainer{
+  @apply  mt-[20rem]  flex flex-col items-center justify-around gap-4 px-3  ; 
+}
+
+.StakeBalanceCard{
+  @apply flex flex-row border px-8 py-8 justify-evenly items-center
+          gap-6 bg-green-100 rounded-md text-LightText
+  ;
+}
+.StakeCardMiddle{
+  @apply flex flex-col items-center justify-center gap-3;
+}
+
+
+
+
+/* /stake route stake card */
+
+.StakeBag{
+  @apply flex flex-col items-start justify-between lg:w-[40%] mt-[3rem] lg:px-8 ;
+}
+
+
+.StakeCardContainer{
+  @apply flex flex-col bg-white border rounded-md  mb-[1.5rem]
+          items-center justify-center py-8  lg:w-[100%]
+  ;
+}
+
+.StakeCardHead{
+  @apply bg-green-100 flex flex-row w-[90%] justify-between items-center px-4 py-4;
+}
+
+.StakeCardMiddle{ 
+  @apply flex flex-row justify-between w-[90%] px-8 py-8
+  ;
+}
+.StakeBtn{
+  @apply bg-gradient-to-b from-green-300 to-LightText w-[80%] border rounded-md
+   flex items-center justify-center text-white font-bold text-xs py-2 ;
+}
+
+.StakeTable{
+  @apply flex flex-row items-center justify-between w-[90%]  px-3 py-4 mt-4;
+}
+
+.StakeTableRight{
+  @apply text-right;
+}
+
+.StakeTableLeft{
+  @apply text-right;
+}
+
+
+/* Liquidity route */
+
+.LiquidityTableBtn{
+  @apply border w-screen  flex flex-row items-center gap-4 
+  justify-around flex-wrap;
+}
+.TableBtn{
+  @apply  border-2 rounded-md border-Text-green text-Text-green
+   px-2 py-1 w-[10rem] flex items-center justify-center; 
+}
+
+.TableHead{
+@apply flex flex-row items-center justify-around w-[100%] py-8;
+}
+
+
+.TableHeaders{
+  @apply  text-LightText font-bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -126,11 +286,15 @@ body {
 
 /* constant modals connect.js */
 
-.conDicv{
-  @apply relative flex ;
-}
+/* background: rgba(185, 161, 161, 0.39);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(0.7px);
+-webkit-backdrop-filter: blur(0.7px);
+border: 1px solid rgba(185, 161, 161, 0.3); */
+
 .connectModalBigDiv { 
-  @apply flex flex-col bg-slate-400 justify-center items-center w-screen h-screen absolute  left-0 right-0  bottom-0 z-[-1]
+  @apply flex flex-col bg-ModalBackgroundBlur justify-center items-center w-screen h-screen absolute right-0 top-0
   ;
 }
 .closeModal{
@@ -149,10 +313,6 @@ body {
 .cP{
   @apply text-[#0C7744] text-lg font-semibold mt-[-4] mb-8;
 }
-
-.closer{
-}
-
 
 
 
