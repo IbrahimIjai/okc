@@ -44,7 +44,7 @@ body {
 }
 
 .HeroContainer{
-  @apply  mt-[20rem]  flex flex-col items-center justify-around gap-4 px-3  ; 
+  @apply  mt-[20rem]  flex flex-col items-center justify-around gap-4 px-3 dark:text-LightGreen ; 
 }
 
 .StakeBalanceCard{
@@ -238,7 +238,7 @@ body {
 
 .getStartDiv {
   @apply  flex flex-col items-center justify-center gap-2 px-11 text-[1.5rem] 
-  font-semibold text-LightText 
+  font-semibold text-LightText dark:text-LightGreen
   ;
 }
 
@@ -285,7 +285,7 @@ body {
 
 
 .topicHead { 
-  @apply text-[1.5rem] font-bold dark:text-[#AEE2B2] pt-6
+  @apply text-[1.5rem] font-bold dark:text-LightMode pt-6
   ;
 }
 
@@ -295,7 +295,7 @@ body {
 }
 
 .question { 
-  @apply flex flex-row justify-between border border-BgDarkGreen rounded px-3 lg:px-7
+  @apply flex flex-row justify-between border border-BgDarkGreen dark:border-LightGreen dark:text-LightMode  rounded px-3 lg:px-7
            py-2 my-4 
   ;
 }

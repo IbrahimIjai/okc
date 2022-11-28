@@ -4,7 +4,7 @@ export default function RewardsTable() {
       <div className="text-DarkTextColor w-screen bg-green-100 
                   dark:bg-BgDarkGreen flex items-center justify-center">
 
-      <div className="rewardsTable lg:scale-150 lg:mt-[8rem] lg:mb-[8rem]">  
+      <div className="rewardsTable lg:scale-150 lg:mt-[8rem] lg:mb-[8rem] border border-LightGreen">  
             <div className="text-DarkTextColor font-semibold">Rewards Calculator</div>
             
            

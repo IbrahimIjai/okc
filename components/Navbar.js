@@ -52,12 +52,12 @@ export default function Navar() {
               return (
                 <div 
                       key={d.Id} 
-                      className={`px-1 lg:px-4 ${curRoute==d.Link ? "scale-130 text-LightText border-b-4 border-LightText" : ""}`}
+                      className={`px-1 lg:px-4 ${curRoute==d.Link ? "scale-130 text-LightText dark:text-white border-b-4 border-LightText" : ""}`}
                 >
                   <Link href={d.Link}>
                     <a> {d.Title}</a>
                   </Link>
-                </div>
+                </div> 
               );
             })
           }
