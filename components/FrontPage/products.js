@@ -20,16 +20,17 @@ export default function Products() {
 
 
     return (
-      <div className="flex flex-col items-center w-screen bg-green-100 dark:bg-BgDarkGreen lg:h-[75vh]">
+      <div className="flex flex-col items-center w-screen bg-green-100 dark:bg-BgDarkGreen lg:h-[65vh]">
         <div className=" topicHead">What we Offer</div>
         <div className="cardContainer">
             {
                 product.map((p, i) => {
                     return (
                             <div key={i} className="card"> 
-                                <Image src={p.image} width={30} height={30} alt="Logo"/>
-                                <div className="py-3 text-[1.3rem] font-semibold">{p.name}</div>
-                                <div className="py-2">{p.Description}</div>
+                                <div className="lg:pt-8" ><Image src={p.image} width={30} height={30} alt="Logo"/></div>
+                                
+                                <div className="py-3 text-[1.3rem] font-semibold ">{p.name}</div>
+                                <div className="py-2 lg:px-4 lg:pb-8">{p.Description}</div>
                             </div>
                     )
                 })

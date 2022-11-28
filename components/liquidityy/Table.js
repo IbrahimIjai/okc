@@ -1,15 +1,18 @@
 import Image from "next/image";
 import { useState } from "react";
 import useMediaQuery from "../hooks/useMediaQueryhooks";
+import { useWeb3React } from "@web3-react/core";
 
   export default function LiquidityTableBtn() {
-    const isDesktop = useMediaQuery('(min-width: 960px)');
+    const { active, account, chainId, library, activate, deactivate } =
+    useWeb3React();
+    const isDesktop = useMediaQuery('(min-width: 640px)');
     const AllPairs = [
         {
             pair: "OKC",
             marker: 1,
             apy: "5%",
-            tvl: "$30.4M",
+            tvl: "$15.4M",
             me: "Staking",
             type: "Staking"
         },
@@ -17,7 +20,7 @@ import useMediaQuery from "../hooks/useMediaQueryhooks";
             pair: "OKC/BTC",
             apy: "5%",
             marker: 2,
-            tvl: "$30.4M",
+            tvl: "$50.4M",
             me: "Staking",
             type: "Liquidity Pool"
         },
@@ -25,7 +28,7 @@ import useMediaQuery from "../hooks/useMediaQueryhooks";
             pair: "OKC/SBTC",
             marker: 2,
             apy: "5%",
-            tvl: "$30.4M",
+            tvl: "$90.4M",
             me: "Staking",
             type: "Lending and collateral"
         },
@@ -89,10 +92,27 @@ console.log(CurTab.Content)
                 <p>{"          "}</p>
             </div>
             {
-                CurTab.Content.map((d, i) => {
+                isDesktop && CurTab.Content.map((d, i) => {
                         return (
                             <div key={i} className="TableData">
-                                {d.pair}
+                               <div className="TableRow flex ">
+                                  {d.marker > 1 ?
+                                         <div className="flex">
+                                            <Image src="/Star.png" width={15} height={15} alt="stars"/>
+                                            <Image src="/Star.png" width={15} height={15} alt="stars"/>
+                                          </div>
+                                  
+                                        :<div>
+                                            <Image src="/Star.png" width={15} height={15} alt="stars"/>
+                                          </div>
+                                  } 
+                                  
+                                  <div>{d.pair} </div>
+                                </div>
+                               <div className="TableRow"> {d.apy} </div>
+                               <div className="TableRow"> {d.tvl} </div>
+                               <div className="TableRow"> {d.type} </div>
+                               <div>{active? "Deposite": "connect wallet"}</div>
                             </div>
                         );
                     }

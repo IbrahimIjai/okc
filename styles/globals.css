@@ -11,25 +11,25 @@ body {
 
 /* navbar.js */
 .NavContainer {
-  @apply  flex flex-row justify-between items-center px-4 py-4 dark:text-[#fff] absolute top-0 right-0 left-0
+  @apply  flex flex-row justify-between items-center dark:text-[#fff] 
+  absolute top-0 right-0 left-0 pt-6 px-8 w-screen
   ;
 }
 
-
+.NavLeft{
+  @apply flex items-center justify-around ;
+}
 .Logo {
-  @apply  text-Black text-[15px] md:text-[22px] font-bold dark:text-[#fff] 
+  @apply  text-Black text-[22px] md:text-[30px] px-2 font-bold dark:text-[#fff] 
   ;
 }
-
-
 .NavLinks {
-  @apply  flex flex-row items-center justify-around px-4 gap-4 text-Black text-[12px] md:text-[22px] font-medium dark:text-[#fff] 
-
+  @apply   flex flex-row items-center justify-around md:px-8 lg:px-4 gap-4 text-Black text-[12px] md:text-[22px] font-medium dark:text-[#fff] 
   ;
 }
 .Btns{
-  @apply flex;
-
+  @apply flex items-center justify-around w-[40%] md:w-[20%] lg:w-auto 
+        lg:mr-7; 
 }
 
 
@@ -110,13 +110,27 @@ body {
 }
 
 .TableHead{
-@apply flex flex-row items-center justify-around w-[100%] py-8;
+@apply flex flex-row items-center justify-around w-[90%] py-8;
 }
 
 
 .TableHeaders{
-  @apply  text-LightText font-bold;
+  @apply  text-LightText font-bold flex-1 px-8;
 }
+
+
+.TableData{
+  @apply  flex flex-row bg-white w-[90%]  items-center justify-around my-3 px-8 
+  py-4 border rounded-md;
+}
+.TableRow{
+  @apply flex-1 ;
+}
+
+
+
+
+
 
 
 
@@ -202,10 +216,12 @@ body {
 
 
 .card {
-  @apply dark:text-DarkTextColor m-auto border-[1.3px] border-cardBoderGreen  rounded-md flex flex-col items-center justify-center text-center px-6 py-2 my-1 w-[85%];
+  @apply dark:text-DarkTextColor m-auto border-[1.3px] border-cardBoderGreen 
+   rounded-md flex flex-col items-center justify-center text-center px-6 py-2 my-1
+   w-[85%];
 }
 .cardContainer {
-  @apply  md:grid md:grid-cols-2 lg:grid-cols-3 lg:m-auto
+  @apply  md:grid md:grid-cols-2 lg:grid-cols-3 lg:m-auto mx-8
   ;
 }
 
@@ -230,7 +246,7 @@ body {
 /* frontPage rewardtable.js */
 
 .rewardsTable{
-  @apply bg-[#011202] w-[80%] py-6 px-4 text-DarkTextColor flex flex-col items-center
+  @apply bg-[#011202] py-8 px-12 text-DarkTextColor flex flex-col items-center
           justify-center rounded
   ;
 }
@@ -242,9 +258,9 @@ body {
 }
 
 .input {
-  @apply w-[100%] text-sm text-gray-900 rounded-sm bg-green-100
+  @apply w-[100%] text-sm text-gray-900 rounded-md bg-green-100
        dark:bg-gray-700  dark:placeholder-gray-400 dark:text-white 
-       px-3
+       px-3 py-2
   ;
 }
 .inputAfter{
@@ -255,11 +271,11 @@ body {
 }
 .rewards {
   @apply  flex flex-row items-center justify-center text-DarkTextColor 
-      text-[.6rem] font-medium  rounded
+  text-[12px] font-medium  rounded 
   ;
 }
 .rewardsDiv { 
-  @apply  flex flex-col justify-between px-3 py-5 text-center gap-3
+  @apply  flex flex-col justify-between px-3 py-5 text-center gap-3 
   ;
 }
 
@@ -269,17 +285,18 @@ body {
 
 
 .topicHead { 
-  @apply text-[1.2rem] font-bold dark:text-[#AEE2B2] pt-6
+  @apply text-[1.5rem] font-bold dark:text-[#AEE2B2] pt-6
   ;
 }
 
 .questionsContainer{
-  @apply px-3 w-[100%]
+  @apply px-7 w-[90%] mb-4
   ;
 }
 
 .question { 
-  @apply flex flex-row justify-between border border-BgDarkGreen rounded px-3 py-2 my-4 w-[100%]
+  @apply flex flex-row justify-between border border-BgDarkGreen rounded px-3 lg:px-7
+           py-2 my-4 
   ;
 }
 

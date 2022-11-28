@@ -19,7 +19,9 @@ const RenderThemeChanger= () => {
 
   if(currentTheme ==="dark"){
     return (
-      <BsSun className="w-10 h-10 text-yellow-500 " role="button" onClick={() => setTheme('light')} />
+      <div className="px-4">
+        <BsSun className="w-6 h-6 text-green-100" role="button" onClick={() => setTheme('light')} />
+      </div>
     )
   }
 
@@ -27,7 +29,7 @@ const RenderThemeChanger= () => {
 
   else {
     return (
-      <BsMoonStars className="w-10 h-10 text-gray-900 " role="button" onClick={() => setTheme('dark')} />
+      <BsMoonStars className="w-6 h-6 text-gray-900 " role="button" onClick={() => setTheme('dark')} />
     )
   }
 };

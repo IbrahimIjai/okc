@@ -7,10 +7,10 @@ const FaqHelper = ({ id, Body, Head }) => {
   return (
     <div>
       <div className="question"  onClick={() => setIsOpen((prev) => !prev)}>
-        <div className="text-[.7rem]" >{Head}</div>
+        <div className="text-[15px] lg:text-[18px]" >{Head}</div>
         {isOpen ? <BiUpArrow /> : <BiDownArrow /> }
       </div>
-      <div className="text-center text-[.8rem]">
+      <div className="text-center text-[1rem]  px-3">
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, y: "-10%" }}
