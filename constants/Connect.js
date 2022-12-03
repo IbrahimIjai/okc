@@ -20,10 +20,10 @@ export default function Connect() {
     const userBalance = utils.formatEther(balance);
     const kcs = userBalance.substring(0, 4);
     setKcsBalance(kcs);
-    const balanceUsdt = await contracts.usdt.balanceOf(account);
-    let usdtbalance = utils.formatEther(balanceUsdt);
-    const usdt = usdtbalance.substring(0, 6);
-    setUsdtBalance(usdt);
+    // const balanceUsdt = await contracts.usdt.balanceOf(account);
+    // let usdtbalance = utils.formatEther(balanceUsdt);
+    // const usdt = usdtbalance.substring(0, 6);
+    // setUsdtBalance(usdt);
   };
   if (active) {
     bal();

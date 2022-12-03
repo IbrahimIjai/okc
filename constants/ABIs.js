@@ -691,6 +691,9 @@ const protocol = new Contract(protocolAddress, protocolABI, provider);
 const deadAddress = "0x0000000000000000000000000000000000000000";
 const queryHost = "https://qatar.distant.finance";
 const okc = new Contract(token, abi, provider);
+const CUSDT = "0x1298808344aD08A76dCB381A4797810e87ED2685";
+const Stakingpool = "0x02fCFb90ba1A3f20f985Be636b0f2a8E227bDC92";
+const usdt = "0x0039f574ee5cc39bdd162e9a88e3eb1f111baf48";
 
 const contracts = {
   protocolAddress,
@@ -700,6 +703,9 @@ const contracts = {
   protocol,
   queryHost,
   okc,
+  CUSDT,
+  Stakingpool,
+  usdt,
 };
 
-export { protocolABI, contracts };
+export { protocolABI, contracts, abi };

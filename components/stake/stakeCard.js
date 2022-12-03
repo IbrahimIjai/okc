@@ -1,9 +1,18 @@
 import Image from "next/image";
+import {useTheme} from "next-themes";
+import { useState } from "react";
 
-
-  export default function StakeCard() {
+  export default function StakeCard(
+                                        {
+                                            unStakeLoading, setStakeAmount, stakeLoading,
+                                            getRewards, unStake,
+                                            Rewards,stakingBal, usdtBalance,
+                                        }
+                                    ) {
+    const {systemTheme , theme, setTheme} = useTheme ();
+    const [openModal, setOpenModal] = useState(false)
     return (
-        <div className="w-screen flex flex-col lg:flex-row items-center w-screen justify-center">
+        <div className="w-screen flex flex-col lg:flex-row items-center justify-center">
             <div className="StakeBag">
                 <p>Stake</p>
                 <div className="StakeCardContainer">
@@ -13,11 +22,10 @@ import Image from "next/image";
                                     <Image src="/folder.png" width={30} height={30} alt="folder"/>
                                     <p className="font-bold"> OKC</p>
                                 </div>
-                                <div><p>Balance: 0 0KC</p></div>
+                                <div><p>Balance: {usdtBalance}USDT</p></div>
                             </div>
-                            <div>0.00</div> 
+                            {/* <div>0.00</div>  */}
                         </div>
-
                         <div className="StakeCardMiddle">
                             <div className="flex flex-col gap-4">
                                 <p className="font-bold">You will recieve</p>
@@ -25,9 +33,9 @@ import Image from "next/image";
                                     <Image src="/folder.png" width={30} height={30} alt="folder"/>
                                     <div><p className="font-semibold">OKC</p></div>
                                 </div>
-                                <div> Balance : 0.00</div>
+                                <div> Balance : {usdtBalance}</div>
                             </div>
-                            <div><p>0.00</p></div>
+                            <div><p>{usdtBalance}</p></div>
                         </div>
 
                         <div className="StakeBtn"><button>Stake OKC</button></div>
@@ -53,22 +61,22 @@ import Image from "next/image";
                     <div className="StakeCardHead">
                         <div>
                             <div className="flex flex-row  ">
-                                <Image src="/folder.png" width={30} height={30} alt="folder"/>
+                                <Image src={theme == "dark" ? "/darkfolder.png": "/folder.png"} width={30} height={30} alt="folder"/>
                                 <p className="font-bold"> OKC</p>
                             </div>
-                            <div><p>Balance: 0 0KC</p></div>
+                            <div><p>Stake Balance: {stakingBal} USDT</p></div>
                         </div>
-                        <div>0.00</div> 
+                        {/* <div>0.00</div>  */}
                     </div>
 
                     <div className="StakeCardMiddle">
                         <div className="flex flex-col gap-4">
-                            <p className="font-bold">You will recieve</p>
+                            <p className="font-bold">YStaking Rewards</p>
                             <div  className="flex  items-center justify-center gap-4">
-                                <Image src="/folder.png" width={30} height={30} alt="folder"/>
+                                <Image src={theme == "dark" ? "/darkfolder.png": "/folder.png"} width={30} height={30} alt="folder"/>
                                 <div><p className="font-semibold">OKC</p></div>
                             </div>
-                            <div> Balance : 0.00</div>
+                            {/* <div> Balance : 0.00</div> */}
                         </div>
                         <div><p>0.00</p></div>
                     </div>
@@ -89,3 +97,6 @@ import Image from "next/image";
     );
   }
   
+
+//   staking contracnt  0x02fCFb90ba1A3f20f985Be636b0f2a8E227bDC92 mainnet
+// cusdt contract 0x1298808344aD08A76dCB381A4797810e87ED2685
